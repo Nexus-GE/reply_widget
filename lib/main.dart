@@ -14,17 +14,26 @@ class MainApp extends StatelessWidget {
       home: Scaffold(
         body: Padding(
           padding: const EdgeInsets.all(20),
-          child: ListView(
-            children: [
-              Align(
-                alignment: Alignment.centerLeft,
-                child: Stack(
-                  children: [
-                    MessageWidget(),
-                  ],
+          child: Container(
+            color: Colors.blue.shade50,
+            child: ListView(
+              children: [
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Stack(
+                    clipBehavior: Clip.none,
+                    children: [
+                      MessageWidget.reply(),
+                      Positioned(
+                        bottom: -70,
+                        left: 20,
+                        child: MessageWidget.text(),
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
