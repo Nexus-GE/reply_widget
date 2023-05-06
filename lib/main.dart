@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:reply_widget/test_widget/message.dart';
 
 void main() {
   runApp(const MainApp());
@@ -9,10 +10,22 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
+        body: Padding(
+          padding: const EdgeInsets.all(20),
+          child: ListView(
+            children: [
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Stack(
+                  children: [
+                    MessageWidget(),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
