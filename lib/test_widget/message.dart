@@ -8,7 +8,7 @@ class MessageWidget extends StatelessWidget {
     this.isReply = false,
     required this.text,
   });
-  factory MessageWidget.reply() {
+  factory MessageWidget.replyTo() {
     return const MessageWidget(
       isReply: true,
       text:
@@ -16,7 +16,7 @@ class MessageWidget extends StatelessWidget {
     );
   }
 
-  factory MessageWidget.text() {
+  factory MessageWidget.reply() {
     return const MessageWidget(
       text: 'In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate',
     );
@@ -25,6 +25,7 @@ class MessageWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 200,
+      height: 100,
       padding: const EdgeInsets.all(10),
       decoration: BoxDecoration(
         color: isReply ? Colors.grey.shade500 : Colors.white,
