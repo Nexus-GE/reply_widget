@@ -7,7 +7,7 @@ class Experiment extends MultiChildRenderObjectWidget {
     super.children,
   });
   @override
-  RenderObject createRenderObject(BuildContext context) {
+  ExperimentObject createRenderObject(BuildContext context) {
     // TODO: implement createRenderObject
     return ExperimentObject();
   }

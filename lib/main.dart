@@ -16,6 +16,7 @@ class MainApp extends StatelessWidget {
         body: Padding(
           padding: const EdgeInsets.all(20),
           child: Container(
+            height: 200,
             color: Colors.blue.shade50,
             child: Experiment(children: [
               MessageWidget.reply(),

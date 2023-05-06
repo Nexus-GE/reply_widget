@@ -1,9 +1,10 @@
 import 'package:flutter/rendering.dart';
+import 'package:reply_widget/experiment_parent_data.dart';
 
 class ExperimentObject extends RenderBox
     with
-        ContainerRenderObjectMixin<RenderBox, StackParentData>,
-        RenderBoxContainerDefaultsMixin<RenderBox, StackParentData> {
+        ContainerRenderObjectMixin<RenderBox, ExperimentParentData>,
+        RenderBoxContainerDefaultsMixin<RenderBox, ExperimentParentData> {
   RenderStack({
     List<RenderBox>? children,
   }) {
@@ -14,7 +15,7 @@ class ExperimentObject extends RenderBox
   void performLayout() {
     RenderBox? child = firstChild;
     while (child != null) {
-      final StackParentData childParentData = child.parentData! as StackParentData;
+      final ExperimentParentData childParentData = child.parentData! as ExperimentParentData;
       size = child.size ?? Size(10, 10);
       constraints.constrain(size);
 
